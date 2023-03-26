@@ -59,7 +59,7 @@ public class Solution {
         return res;
     }
 
-    private static void inorder(TreeNode root, ArrayList<Integer> res) {
+    public static void inorder(TreeNode root, ArrayList<Integer> res) {
         if(root==null){
             return;
         }
@@ -68,7 +68,7 @@ public class Solution {
         inorder(root.right,res);
     }
 
-    private static void preorder(TreeNode root,ArrayList<Integer> res){
+    public static void preorder(TreeNode root,ArrayList<Integer> res){
         if(root == null){
             return;
         }

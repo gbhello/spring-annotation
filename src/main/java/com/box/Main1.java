@@ -1,8 +1,8 @@
 package com.box;
 
-import com.google.common.base.Preconditions;
-
-import java.io.UnsupportedEncodingException;
+import com.box.leetcode.User;
+import java.lang.reflect.InvocationTargetException;
+import org.apache.commons.beanutils.PropertyUtils;
 
 /**
  * 描述
@@ -14,12 +14,17 @@ public class Main1 {
 
 
 
-    public static void main(String[] args) throws UnsupportedEncodingException {
-        String param = "未读代码";
-        String name = Preconditions.checkNotNull(param);
-        System.out.println(name); // 未读代码
-        String param2 = null;
-        String name2 = Preconditions.checkNotNull(param2); // NullPointerException
-        System.out.println(name2);
+    public static void main(String args[])
+        throws IllegalAccessException, NoSuchMethodException, InvocationTargetException {
+        User node1 = new User(1,"zhangsan");
+        User node2 = new User();
+
+        PropertyUtils.copyProperties(node2,node1);
+
+//        BeanCopier beanCopier = BeanCopier
+//            .create(User.class, User.class, false);
+//
+//        beanCopier.copy(node1,node2,null);
+        System.out.println(node2);
     }
 }
