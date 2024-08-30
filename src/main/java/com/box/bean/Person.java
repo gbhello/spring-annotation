@@ -1,6 +1,7 @@
 package com.box.bean;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.ToString;
 
 /**
@@ -11,6 +12,7 @@ import lombok.ToString;
  */
 @AllArgsConstructor
 @ToString
+@Data
 public class Person {
     private String name;
     private Integer age;

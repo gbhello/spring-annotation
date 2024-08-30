@@ -18,7 +18,7 @@ public class UserService {
     @Transactional
     public void insertUser() {
         userDao.insert();
-        int i =1/0;
+        int i =1/1;
         System.out.println("插入完成...");
     }
 }

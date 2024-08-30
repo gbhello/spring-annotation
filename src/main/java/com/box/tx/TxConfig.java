@@ -28,7 +28,7 @@ public class TxConfig {
         dataSource.setUser("root");
         dataSource.setPassword("123456");
         dataSource.setDriverClass("com.mysql.jdbc.Driver");
-        dataSource.setJdbcUrl("jdbc:mysql://localhost:3306/testdb");
+        dataSource.setJdbcUrl("jdbc:mysql://localhost:3306/letao");
         return dataSource;
     }
 

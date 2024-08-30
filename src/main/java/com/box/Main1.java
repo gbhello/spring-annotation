@@ -1,9 +1,8 @@
 package com.box;
 
-import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.apache.commons.collections4.CollectionUtils;
+import com.box.springmaster.one.HelloWorld;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * 描述
@@ -13,13 +12,13 @@ import org.apache.commons.collections4.CollectionUtils;
  */
 public class Main1 {
 
+    public static void main(String[] args) {
+        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
+        HelloWorld helloWorld = (HelloWorld) context.getBean("helloWorld");
 
-    public static void main(String args[])
-        throws IllegalAccessException, NoSuchMethodException, InvocationTargetException {
-        ArrayList<Integer> a = new ArrayList<>(Arrays.asList(1, 2, 3));
-        ArrayList<Integer> b = new ArrayList<>(Arrays.asList(2, 3));
-
-        System.out.println(CollectionUtils.subtract(a,b));
+        helloWorld.sayHello();
     }
+
 }
+

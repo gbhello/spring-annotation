@@ -1,0 +1,18 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 定义一个名为helloWorld的Bean -->
+    <bean id="helloWorld" class="com.box.springmaster.one.HelloWorld"/>
+
+    <bean id="ink" class="com.box.springmaster.one.Ink">
+        <property name="color" value="Black"/>
+    </bean>
+    <bean id="ink1" class="com.box.springmaster.one.Ink">
+        <property name="color" value="Red"/>
+    </bean>
+    <bean id="printer" class="com.box.springmaster.one.Printer" autowire="byType">
+        <property name="ink" ref="ink"/>
+    </bean>
+</beans>
