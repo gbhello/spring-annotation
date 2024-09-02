@@ -1,4 +1,4 @@
-package com.box;
+package com.box.main;
 
 import com.box.springmaster.one.HelloWorld;
 import org.springframework.context.ApplicationContext;
